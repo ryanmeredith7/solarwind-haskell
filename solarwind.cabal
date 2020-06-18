@@ -51,15 +51,16 @@ executable solarwind
   main-is:             Main.hs
 
   -- Modules included in this executable, other than Main.
-  -- other-modules:
+  other-modules: Omni, Jumps
 
   -- LANGUAGE extensions used by modules in this package.
   -- other-extensions:
 
-  GHC-Options: -Wall
+  ghc-options: -Wall
+  ghc-prof-options: -with-rtsopts=-p -fprof-auto-calls
 
   -- Other library packages from which modules are imported.
-  build-depends:       base ^>=4.13.0.0, http-conduit, bytestring
+  build-depends:       base, http-conduit, bytestring, vector
 
   -- Directories containing source files.
   hs-source-dirs:      src
@@ -67,3 +68,7 @@ executable solarwind
   -- Base language which the package is written in.
   default-language:    Haskell2010
 
+source-repository origin
+    type: git
+    location: git://github.com/ryanmeredith7/solarwind-ionosphere.git
+    branch: master
