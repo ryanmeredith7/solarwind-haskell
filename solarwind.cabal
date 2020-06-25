@@ -60,7 +60,8 @@ executable solarwind
   ghc-prof-options: -with-rtsopts=-p -fprof-auto-calls
 
   -- Other library packages from which modules are imported.
-  build-depends:       base, http-conduit, bytestring, vector, statistics
+  build-depends:       base, http-conduit, bytestring, vector, statistics,
+                       math-functions
 
   -- Directories containing source files.
   hs-source-dirs:      src
